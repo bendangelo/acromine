@@ -1,0 +1,11 @@
+# these are all due to build_sorter in lib/acromine/core.rb
+# refactoring for simplicity would be mostly aesthetic, but
+# we'll put them in a todo in case a flash of brilliance hits
+Metrics/AbcSize:
+  Max: 24.74
+
+Metrics/CyclomaticComplexity:
+  Max: 7
+
+Metrics/MethodLength:
+  Max: 34

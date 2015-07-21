@@ -1,0 +1,19 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  Exclude:
+    - '**/Gemfile'
+    - '**/*.gemspec'
+    - 'pkg/**/*'
+
+Style/RegexpLiteral:
+  Exclude:
+    - '**/Guardfile'
+
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Metrics/LineLength:
+  Exclude:
+    - 'features/step_definitions/*.rb'

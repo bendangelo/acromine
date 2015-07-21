@@ -1,0 +1,47 @@
+[
+   {
+      "sf" : "TCP",
+      "lfs" : [
+         {
+            "freq" : 291,
+            "since" : 1978,
+            "lf" : "tricalcium phosphate"
+         },
+         {
+            "freq" : 184,
+            "since" : 1978,
+            "lf" : "tumor control probability"
+         },
+         {
+            "freq" : 291,
+            "since" : 1989,
+            "lf" : "toxin-coregulated pilus"
+         },
+         {
+            "freq" : 82,
+            "since" : 1989,
+            "lf" : "2,4,6-trichlorophenol"
+         },
+         {
+            "freq" : 55,
+            "since" : 1974,
+            "lf" : "3,5,6-trichloro-2-pyridinol"
+         },
+         {
+            "freq" : 82,
+            "since" : 1974,
+            "lf" : "tranylcypromine"
+         },
+         {
+            "freq" : 28,
+            "since" : 1966,
+            "lf" : "tricresyl phosphate"
+         },
+         {
+            "freq" : 23,
+            "since" : 1966,
+            "lf" : "tropical calcific pancreatitis"
+         }
+      ]
+   }
+]

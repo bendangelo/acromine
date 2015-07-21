@@ -1,0 +1,10 @@
+History.md
+LICENSE
+Manifest.txt
+README.md
+acromine.gemspec
+lib/acromine.rb
+lib/acromine/core.rb
+lib/acromine/longform.rb
+lib/acromine/longform_variant.rb
+lib/acromine/version.rb

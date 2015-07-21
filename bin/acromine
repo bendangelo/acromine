@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'acromine/cli'
+
+# run the CLI
+exit Acromine::CLI.new.run(ARGV)
