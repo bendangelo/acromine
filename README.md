@@ -62,13 +62,15 @@ hash:
     acro.longforms('HMM').variants(limit: 5)
 
 Variants will be sorted by descending frequency count then by ascending
-variant year.  These can be changed using the 'sort_spec' option. The
-spec is one or two two-character pairs joined by a comma.  The first
-character of the pair is what to sort - f for the frequency and y for
-the year.  The second character of the pair is how to sort - a for
-ascending and d for descending:
+variant year and finally by ascending long form.
 
-    acro.longforms('HMM').variants(sort_spec: 'fa,yd'
+This order can be changed using the 'sort_spec' option. The spec is one
+or two two-character pairs joined by a comma.  The first character of
+the pair is what to sort - f for the frequency and y for the year.  The
+second character of the pair is how to sort - a for ascending and d for
+descending:
+
+    acro.longforms('HMM').variants(sort_spec: 'fa,yd')
 
 A LongformVariant object has three getter methods:
 

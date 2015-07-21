@@ -288,14 +288,14 @@ RSpec.describe Acromine do
       )
       terms = lfs.map { |e| e['lf'] }
       expect(terms).to eq([
-        'tropical calcific pancreatitis',
         'tricresyl phosphate',
-        'tranylcypromine',
+        'tropical calcific pancreatitis',
         '3,5,6-trichloro-2-pyridinol',
+        'tranylcypromine',
         'tricalcium phosphate',
         'tumor control probability',
-        'toxin-coregulated pilus',
-        '2,4,6-trichlorophenol'
+        '2,4,6-trichlorophenol',
+        'toxin-coregulated pilus'
       ])
     end
 
@@ -305,12 +305,12 @@ RSpec.describe Acromine do
       )
       terms = lfs.map { |e| e['lf'] }
       expect(terms).to eq([
-        'toxin-coregulated pilus',
         '2,4,6-trichlorophenol',
+        'toxin-coregulated pilus',
         'tricalcium phosphate',
         'tumor control probability',
-        'tranylcypromine',
         '3,5,6-trichloro-2-pyridinol',
+        'tranylcypromine',
         'tricresyl phosphate',
         'tropical calcific pancreatitis'
       ])
@@ -339,8 +339,8 @@ RSpec.describe Acromine do
       )
       terms = lfs.map { |e| e['lf'] }
       expect(terms).to eq([
-        'tricalcium phosphate',
         'toxin-coregulated pilus',
+        'tricalcium phosphate',
         'tumor control probability',
         '2,4,6-trichlorophenol',
         'tranylcypromine',
@@ -357,8 +357,8 @@ RSpec.describe Acromine do
       )
       terms = lfs.map { |e| e['lf'] }
       expect(terms).to eq([
-        'tricalcium phosphate',
         'toxin-coregulated pilus',
+        'tricalcium phosphate',
         'tumor control probability'
       ])
     end
@@ -370,8 +370,8 @@ RSpec.describe Acromine do
       )
       terms = lfs.map { |e| e['lf'] }
       expect(terms).to eq([
-        'tricalcium phosphate',
         'toxin-coregulated pilus',
+        'tricalcium phosphate',
         'tumor control probability',
         '2,4,6-trichlorophenol',
         'tranylcypromine',
