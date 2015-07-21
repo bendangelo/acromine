@@ -78,7 +78,7 @@ class Acromine
   # @param sort_spec [String] how to sort on frequency and year
   # @api private
   def massage_data(json, limit: nil, sort_spec: 'fd,ya')
-    xforms = build_sort_xforms(sort_spec)
+    xforms = build_sort_xforms(sort_spec + ',la')
     sorted = json.sort_by do |e|
       xforms.map { |x| x.call(e) }
     end
@@ -120,6 +120,11 @@ class Acromine
                     ->(x) { x['since'] }
                   when 'd'
                     ->(x) { -x['since'] }
+                  end
+                when 'l'
+                  case how
+                  when 'a'
+                    ->(x) { x['lf'] }
                   end
                 end
     end

@@ -1,9 +1,9 @@
 # -*- encoding: utf-8 -*-
-# stub: acromine 0.1.0.20150721074443 ruby lib
+# stub: acromine 0.1.1.20150721081626 ruby lib
 
 Gem::Specification.new do |s|
   s.name = "acromine"
-  s.version = "0.1.0.20150721074443"
+  s.version = "0.1.1.20150721081626"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.require_paths = ["lib"]
