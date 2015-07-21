@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0051)http://www.nactem.ac.uk/software/acromine/rest.html -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Acromine REST Service</title>
+<meta name="copyright" content="© National Centre for Text Mining">
+<meta name="keywords" content="Text Mining, Data Mining, University of Manchester, University of Liverpool, term, recognition, xmlrpc, soap">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"> 
+<meta name="DC.title" content="Acromine REST Service">
+<meta name="DC.creator" content="Naoaki Okazaki"> 
+<meta name="DC.publisher" content="NaCTeM">
+
+<meta name="DC.type" content="XHTML">
+<meta name="DC.format" content="text/html;charset=iso-8859-1">
+<meta name="DC.language" scheme="DCTERMS.URI" content="English"> 
+<link rel="stylesheet" href="./not_json_files/nactem.css" type="text/css">
+<link rel="alternate" type="application/rss+xml" href="http://www.nactem.ac.uk/news/rss.xml" title="NaCTeM News &amp; Events (RSS)">
+<link rel="up" href="http://www.nactem.ac.uk/" title="Up">
+<meta name="DC.subject" lang="English" content="The National Centre for Text Mining is the world&#39;s first publicly-funded centre for text mining.">
+<meta name="DC.description" lang="English" content="NaCTeM is a collaboration between the Universities of Manchester and Liverpool">
+<link rel="up" href="http://www.nactem.ac.uk/" title="Up">
+</head>
+ 
+<body data-feedly-mini="yes">
+
+<!-- PAGE CONTAINER -->
+<div id="container">
+<div id="frameleft"></div>
+<div id="frameright"></div>
+
+<!-- MAIN CONTENT -->
+<div id="content">
+	
+	
+<div id="logobanner">
+  <a href="http://www.nactem.ac.uk/index.php"><img src="./not_json_files/nactemlogo.gif" alt="NaCTeM" title="Welcome to the National Centre for Text Mining" width="262" height="73"></a> </div>
+
+	
+
+	<div id="pagecontent">
+		<div id="breadcrumbtrail">
+		You are in: <a href="http://www.nactem.ac.uk/software/acromine/">Acromine</a>, <a href="./not_json_files/not_json.html">REST service</a></div>
+
+		<div id="subcontent">
+		
+			<div id="subcontentleft">
+				<div id="subcontentleftcontent">
+				
+					
+<h1>Acromine REST Service (<a href="http://www.nactem.ac.uk/requestaccess.php">Request Access</a>)</h1>
+<!-- [<a href="/notice">Service Offline Notice<a>] -->
+
+<p>
+Acromine REST Service provides a RESTful interface, where you can use the Acromine dictionary from your client programs.
+</p>
+
+<h2>Client sample</h2>
+<ul>
+<li><a href="http://www.nactem.ac.uk/software/acromine/dictionary.py?sf=HMM">The response from the service for the abbreviation "HMM"</a></li>
+<li>JavaScript with <a href="http://www.prototypejs.org/">prototype.js</a> [<a href="http://www.nactem.ac.uk/software/acromine/client-html.html">View source</a>] [<a href="http://www.nactem.ac.uk/software/acromine/client.html">Run</a>]</li>
+<li>Python 2.6 or later (with JSON support) [<a href="http://www.nactem.ac.uk/software/acromine/client-py.html">View source</a>] [<a href="http://www.nactem.ac.uk/software/acromine/client.py">Run</a>]</li>
+</ul>
+
+<h2>Acromine REST API</h2>
+<p>
+This Web service receives a query abbreviation or fullform as parameters, and returns abbreviation definitions in JSON format. 
+</p>
+
+<h3>Request URL (GET)</h3>
+<p>To obtain abbreviation definitions, send an HTTP GET request to the following URL:
+</p>
+<pre>http://www.nactem.ac.uk/software/acromine/dictionary.py
+</pre>
+
+<h3>Request parameters</h3>
+<p>
+This table explains the parameters for the service.
+
+</p>
+
+<table style="table-layout:auto">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>sf</td>
+    <td>string</td>
+    <td>Abbreviation for which definitions are to be retrieved.</td>
+  </tr>
+  <tr>
+    <td>lf</td>
+    <td>string</td>
+    <td>Fullforms for which abbreviations to be retrieved.</td>
+  </tr>
+  </tbody>
+</table>
+
+<h3>Response</h3>
+<p>
+The service returns an array in JSON format.
+Each element in the array consists of the following members:
+</p>
+<table style="table-layout:auto">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>sf</td>
+    <td>string</td>
+    <td>Abbreviation.</td>
+  </tr>
+  <tr>
+    <td>lfs</td>
+    <td>array of longform objects</td>
+    <td>The array of longforms associated with the shortform.</td>
+  </tr>
+  </tbody>
+</table>
+
+<p>
+Longform objects have the following members:
+</p>
+<table style="table-layout:auto">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lf</td>
+    <td>string</td>
+    <td>Representative form of the full form.</td>
+  </tr>
+  <tr>
+    <td>freq</td>
+    <td>integer</td>
+    <td>The number of occurrences of the definition in the corpus.</td>
+  </tr>
+  <tr>
+    <td>since</td>
+    <td>integer</td>
+    <td>The year when the definition appeared for the first time in the corpus.</td>
+  </tr>
+  <tr>
+    <td>vars</td>
+    <td>array of variation objects</td>
+    <td>An array of variation objects that gather surface expressions of the full form in the corpus.</td>
+  </tr>
+  </tbody>
+</table>
+
+<p>
+Variation objects have the following members:
+</p>
+<table style="table-layout:auto">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>lf</td>
+    <td>string</td>
+    <td>The surface form of the full form.</td>
+  </tr>
+  <tr>
+    <td>freq</td>
+    <td>integer</td>
+    <td>The number of occurrences of the surface form in the abbreviation definition in the corpus.</td>
+  </tr>
+  <tr>
+    <td>since</td>
+    <td>integer</td>
+    <td>The year when the surface form appeared for the first time in the corpus.</td>
+  </tr>
+  </tbody>
+</table>
+
+<!--endif-home-->
+
+				</div>
+			</div>
+			
+			
+				
+				
+				
+			<div id="footer">
+				
+<p><a href="http://www.jisc.ac.uk/"><img src="./not_json_files/jisc.gif" alt="JISC" width="81" height="50"></a> <a href="http://www.bbsrc.ac.uk/"><img src="./not_json_files/bbsrc.gif" alt="BBSRC" width="101" height="50"></a> <a href="http://www.epsrc.ac.uk/"><img src="./not_json_files/epsrc.gif" alt="EPSRC" width="117" height="50"></a><br>
+  The National Centre for Text Mining is funded by JISC, BBSRC and EPSRC. <br>
+  All
+site content © The Universities of Manchester and Liverpool<br>
+</p>
+
+			</div>
+	
+		</div>
+		
+		
+		
+	</div>
+
+
+<!-- END MAIN CONTENT -->
+</div>
+</div>
+<div id="framebottom"></div>
+
+<!-- END PAGE CONTAINER -->
+
+
+
+</body></html>
