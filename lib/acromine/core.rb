@@ -24,7 +24,7 @@ class Acromine
   #   acronym, or an empty array if the acronym was not found
   def longforms(acronym, opts = {})
     # validate our options
-    validate_opts(opts)
+    validate_opts(**opts)
     # get the acronyms from the webservice
     ret = self.class.get('', query: { sf: acronym })
     # an empty JSON array means the acronym was not found
@@ -65,7 +65,7 @@ class Acromine
   # @api private
   def build_lfs(json, opts = {})
     ret = []
-    massage_data(json[0]['lfs'], opts).each do |lf|
+    massage_data(json[0]['lfs'], **opts).each do |lf|
       lfobj = build_lf(lf)
       ret << lfobj
     end
